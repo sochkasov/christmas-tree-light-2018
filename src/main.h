@@ -12,6 +12,6 @@ const int BUTTON_PIN = 4;
 #define NUM_LEDS_LINE    69          // The number of LED on the line
 // #define NUM_LEDS_LINE    39
 
-const int TIME_FOR_1_EFFECT = 15;    // by seconds
+const int TIME_FOR_1_EFFECT = 60;    // by seconds
 #define BRIGHTNESS          255      // maximum brightness
 #define FRAMES_PER_SECOND   120
