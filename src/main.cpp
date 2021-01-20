@@ -70,37 +70,50 @@ void addGlitterForStar( fract8 chanceOfGlitter) {
   }
 }//end star0
 
+// Только под 11 светодиодов в звезде
 void star1() 
 {
-  leds[ NUM_LEDS_LINE ] = star_ext;
-  leds[ NUM_LEDS_LINE+1 ] = star_mid;
-  leds[ NUM_LEDS_LINE+2 ] = star_ext;
-  leds[ NUM_LEDS_LINE+3 ] = star_mid;
-  leds[ NUM_LEDS_LINE+4 ] = star_ext;
-  leds[ NUM_LEDS_LINE+5 ] = star_mid;
-  leds[ NUM_LEDS_LINE+6 ] = star_ext;
-  leds[ NUM_LEDS_LINE+7 ] = star_mid;
-  leds[ NUM_LEDS_LINE+8 ] = star_ext;
-  leds[ NUM_LEDS_LINE+9 ] = star_mid;
-  leds[ NUM_LEDS_LINE+10 ] = star_center;
+  if (NUM_LEDS_STAR != 11) {
+    star0(); // only 11 leds use in the star
+  } else {
+    leds[ NUM_LEDS_LINE ] = star_ext;
+    leds[ NUM_LEDS_LINE+1 ] = star_mid;
+    leds[ NUM_LEDS_LINE+2 ] = star_ext;
+    leds[ NUM_LEDS_LINE+3 ] = star_mid;
+    leds[ NUM_LEDS_LINE+4 ] = star_ext;
+    leds[ NUM_LEDS_LINE+5 ] = star_mid;
+    leds[ NUM_LEDS_LINE+6 ] = star_ext;
+    leds[ NUM_LEDS_LINE+7 ] = star_mid;
+    leds[ NUM_LEDS_LINE+8 ] = star_ext;
+    leds[ NUM_LEDS_LINE+9 ] = star_mid;
+    leds[ NUM_LEDS_LINE+10 ] = star_center;
+  }
+
 }//end star1
 
+// Только под 11 светодиодов в звезде
 void star1g() 
 {
-  leds[ NUM_LEDS_LINE ] = star_ext;
-  leds[ NUM_LEDS_LINE+1 ] = star_mid;
-  leds[ NUM_LEDS_LINE+2 ] = star_ext;
-  leds[ NUM_LEDS_LINE+3 ] = star_mid;
-  leds[ NUM_LEDS_LINE+4 ] = star_ext;
-  leds[ NUM_LEDS_LINE+5 ] = star_mid;
-  leds[ NUM_LEDS_LINE+6 ] = star_ext;
-  leds[ NUM_LEDS_LINE+7 ] = star_mid;
-  leds[ NUM_LEDS_LINE+8 ] = star_ext;
-  leds[ NUM_LEDS_LINE+9 ] = star_mid;
-  leds[ NUM_LEDS_LINE+10 ] = star_center;
-  addGlitterForStar(80);
+    if (NUM_LEDS_STAR != 11) {
+    star0(); // only 11 leds use in the star
+  } else {
+    leds[ NUM_LEDS_LINE ] = star_ext;
+    leds[ NUM_LEDS_LINE+1 ] = star_mid;
+    leds[ NUM_LEDS_LINE+2 ] = star_ext;
+    leds[ NUM_LEDS_LINE+3 ] = star_mid;
+    leds[ NUM_LEDS_LINE+4 ] = star_ext;
+    leds[ NUM_LEDS_LINE+5 ] = star_mid;
+    leds[ NUM_LEDS_LINE+6 ] = star_ext;
+    leds[ NUM_LEDS_LINE+7 ] = star_mid;
+    leds[ NUM_LEDS_LINE+8 ] = star_ext;
+    leds[ NUM_LEDS_LINE+9 ] = star_mid;
+    leds[ NUM_LEDS_LINE+10 ] = star_center;
+    addGlitterForStar(80);
+  }
+
 }//end star1g
 
+// Только под 11 светодиодов в звезде
 void star2() 
 {
   if (star_ext_direction){ star_ext_Hue--; } else { star_ext_Hue++; }
@@ -111,36 +124,34 @@ void star2()
   if (star_mid_Hue>24) { star_mid_direction=true; } else if (star_mid_Hue==0) { star_mid_direction=false; }
   if (star_center_Hue>7) { star_center_direction=true; } else if (star_center_Hue==0) { star_center_direction=false; }
 
+    if (NUM_LEDS_STAR != 11) {
+    star0(); // only 11 leds use in the star
+  } else {
+    leds[ NUM_LEDS_LINE ].setHue(star_ext_Hue);
+    leds[ NUM_LEDS_LINE+1 ].setHue(star_mid_Hue);
+    leds[ NUM_LEDS_LINE+2 ].setHue(star_ext_Hue);
+    leds[ NUM_LEDS_LINE+3 ].setHue(star_mid_Hue);
+    leds[ NUM_LEDS_LINE+4 ].setHue(star_ext_Hue);
+    leds[ NUM_LEDS_LINE+5 ].setHue(star_mid_Hue);
+    leds[ NUM_LEDS_LINE+6 ].setHue(star_ext_Hue);
+    leds[ NUM_LEDS_LINE+7 ].setHue(star_mid_Hue);
+    leds[ NUM_LEDS_LINE+8 ].setHue(star_ext_Hue);
+    leds[ NUM_LEDS_LINE+9 ].setHue(star_mid_Hue);
+    leds[ NUM_LEDS_LINE+10 ].setHue(star_center_Hue);
+  }
 
-  leds[ NUM_LEDS_LINE ].setHue(star_ext_Hue);
-  leds[ NUM_LEDS_LINE+1 ].setHue(star_mid_Hue);
-  leds[ NUM_LEDS_LINE+2 ].setHue(star_ext_Hue);
-  leds[ NUM_LEDS_LINE+3 ].setHue(star_mid_Hue);
-  leds[ NUM_LEDS_LINE+4 ].setHue(star_ext_Hue);
-  leds[ NUM_LEDS_LINE+5 ].setHue(star_mid_Hue);
-  leds[ NUM_LEDS_LINE+6 ].setHue(star_ext_Hue);
-  leds[ NUM_LEDS_LINE+7 ].setHue(star_mid_Hue);
-  leds[ NUM_LEDS_LINE+8 ].setHue(star_ext_Hue);
-  leds[ NUM_LEDS_LINE+9 ].setHue(star_mid_Hue);
-  leds[ NUM_LEDS_LINE+10 ].setHue(star_center_Hue);
 }//end star2
 
+// Доработано до любого кол-ва светодиодов в звезде
 void star3() 
 {
   if (star_ext_direction){ star_ext_Hue--; } else { star_ext_Hue++; }
   if (star_ext_Hue>254) { star_ext_direction=true; } else if (star_ext_Hue<40) { star_ext_direction=false; }
 
-  leds[ NUM_LEDS_LINE ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+1 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+2 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+3 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+4 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+5 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+6 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+7 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+8 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+9 ].setHSV(0,255,star_ext_Hue);
-  leds[ NUM_LEDS_LINE+10 ].setHSV(0,255,star_ext_Hue);
+  for (uint8_t star_led; star_led < NUM_LEDS_STAR; star_led++) {
+    leds[ NUM_LEDS_LINE + star_led].setHSV(0,255,star_ext_Hue);
+  }
+
 }//end star3
 
 void rainbow() {
@@ -526,19 +537,19 @@ void loop() {
           star0();
           break;
         case 1:
-          star1();
+          star1(); // only 11 leds use in the star
           break;
         case 2:
-          star2();
+          star2(); // only 11 leds use in the star
           break;
         case 3:
           star3();
           break;
         case 4:
-          star1g();
+          star1g(); // only 11 leds use in the star
           break;
         default:
-          star1();
+          star1(); // only 11 leds use in the star
           break;
       }
       
