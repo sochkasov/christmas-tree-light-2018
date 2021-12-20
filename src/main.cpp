@@ -1,3 +1,8 @@
+#if defined(ARDUINO_ESP8266_NODEMCU_ESP12E)
+#warning "Generate code for esp8266 (NodeMCU)"
+#define FASTLED_ESP8266_NODEMCU_PIN_ORDER  // for NodeMCU (https://github.com/FastLED/FastLED/wiki/ESP8266-notes)
+#endif
+
 #include <Arduino.h>
 #include "FastLED.h"
 #include "AceButton.h"
